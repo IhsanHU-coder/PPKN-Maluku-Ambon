@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MALUKU Ambon: Mahakarya Timur Indonesia</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;600&family=Cormorant+Garamond:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root { 
+            --deep: #03050a; 
+            --gold: #d4af37; 
+            --accent: #38bdf8;
+            --copper: #b87333;
+        }
+        body { 
+            font-family: 'Plus Jakarta Sans', sans-serif; 
+            background-color: var(--deep); 
+            color: #e2e8f0; 
+            overflow-x: hidden;
+        }
+        .font-serif { font-family: 'Cormorant Garamond', serif; }
+        
+        /* Premium Background Texture */
+        body::before {
+            content: "";
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: url('https://www.transparenttextures.com/patterns/carbon-fibre.png');
+            opacity: 0.03;
+            pointer-events: none;
+            z-index: 50;
+        }
+
+        /* Luxury Gradient Text */
+        .text-gold-gradient {
+            background: linear-gradient(to right, #bf953f, #fcf6ba, #b38728, #fbf5b7, #aa771c);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Glassmorphism Refined */
+        .glass-premium { 
+            background: rgba(255, 255, 255, 0.02); 
+            backdrop-filter: blur(15px); 
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+        }
+        
+        @keyframes slow-pan {
+            0% { transform: scale(1) translateX(0); }
+            100% { transform: scale(1.15) translateX(-2%); }
+        }
+        .animate-slow-pan { animation: slow-pan 30s infinite alternate linear; }
+
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: var(--deep); }
+        ::-webkit-scrollbar-thumb { background: #334155; border-radius: 10px; }
+    </style>
+</head>
+<body>
+
+    <div id="progress-bar" class="fixed top-0 left-0 h-[2px] bg-amber-500 z-[110] transition-all duration-300"></div>
+
+    <nav class="fixed w-full z-[100] px-6 py-8 transition-all duration-700" id="navbar">
+        <div class="max-w-7xl mx-auto flex justify-between items-center">
+            <div class="group cursor-pointer">
+                <div class="text-2xl font-serif italic text-white tracking-[0.4em] transition-all duration-500 group-hover:tracking-[0.5em]">MALUKU AMBON</div>
+                <div class="h-[1px] bg-gradient-to-r from-transparent via-amber-500 to-transparent w-0 group-hover:w-full transition-all duration-700"></div>
+            </div>
+            
+            <div class="hidden xl:flex items-center space-x-8 text-[10px] uppercase tracking-[0.3em] font-medium">
+                <a href="#alam" class="text-white/50 hover:text-amber-400 transition-all">Sanubari</a>
+                <a href="#adat-pakaian" class="text-white/50 hover:text-amber-400 transition-all">Pakaian</a>
+                <a href="#budaya" class="text-white/50 hover:text-amber-400 transition-all">Tradisi</a>
+                <a href="#adat" class="text-white/50 hover:text-amber-400 transition-all">Filosofi</a>
+                <a href="#kuliner" class="text-white/50 hover:text-amber-400 transition-all">Rempah</a>
+                <button class="px-6 py-2 border border-amber-500/30 rounded-full hover:bg-amber-500 hover:text-black transition-all duration-500 text-amber-500 uppercase tracking-widest text-[9px]">Jelajah</button>
+            </div>
+        </div>
+    </nav>
+
+    <section class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-[#03050a] z-10"></div>
+            <img src="https://images.unsplash.com/photo-1516690561799-46d8f74f9abf?auto=format&fit=crop&q=80" class="w-full h-full object-cover animate-slow-pan" alt="Maluku">
+        </div>
+        
+        <div class="relative z-20 text-center px-4" data-aos="fade-up">
+            <h4 class="text-amber-500 tracking-[1em] uppercase text-[10px] font-bold mb-4">The Spice Islands Masterpiece</h4>
+            <h1 class="font-serif text-7xl md:text-[160px] text-white leading-none mb-8 italic font-light">
+                Pulang <span class="text-gold-gradient font-normal">ke Timur</span>
+            </h1>
+            <p class="max-w-2xl mx-auto font-light text-slate-300/80 leading-relaxed text-lg italic">
+                "Menelusuri jejak rempah, menemukan jiwa yang merdeka dalam harmoni laut dan tradisi."
+            </p>
+        </div>
+    </section>
+
+    <section id="adat-pakaian" class="py-40 bg-[#03050a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid lg:grid-cols-2 gap-20 items-center">
+                <div class="relative" data-aos="fade-right">
+                    <img src="image/kain.png" class="rounded-3xl border border-white/10 grayscale hover:grayscale-0 transition duration-1000 shadow-2xl" alt="Pakaian Adat Maluku">
+                    <div class="absolute -bottom-10 -right-10 glass-premium p-8 rounded-2xl hidden md:block">
+                        <p class="font-serif text-3xl italic text-amber-500">Baju Cele</p>
+                        <p class="text-[10px] uppercase tracking-widest text-slate-500">Ikonografi Identitas</p>
+                    </div>
+                </div>
+                <div data-aos="fade-left">
+                    <span class="text-amber-500 font-serif italic text-xl italic tracking-widest">Wastra & Busana</span>
+                    <h2 class="text-6xl font-serif text-white mt-4 mb-8">Keanggunan <br><span class="italic text-slate-500">Kain Kotak-Kotak</span></h2>
+                    
+                    <div class="space-y-8">
+                        <div>
+                            <h4 class="text-amber-500 font-bold uppercase text-xs tracking-[0.2em] mb-2">Baju Cele (Kain Salele)</h4>
+                            <p class="text-slate-400 leading-relaxed italic">
+                                Motif kotak-kotak kecil pada Baju Cele melambangkan **ketegasan dalam kesederhanaan**. Warna merah yang dominan adalah simbol keberanian perempuan Maluku dalam menjaga martabat keluarga dan negeri.
+                            </p>
+                        </div>
+                        <div class="h-[1px] w-full bg-white/5"></div>
+                        <div>
+                            <h4 class="text-amber-500 font-bold uppercase text-xs tracking-[0.2em] mb-2">Makna Filosofis</h4>
+                            <p class="text-slate-400 leading-relaxed italic">
+                                Digunakan tanpa alas kaki pada upacara adat untuk menunjukkan **kerendahan hati** dan hubungan langsung antara manusia dengan tanah leluhur yang suci (Bumi Alifuru).
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="alam" class="py-40 relative bg-zinc-950">
+        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-24 items-center">
+            <div data-aos="fade-right">
+                <div class="flex items-center gap-4 mb-6">
+                    <div class="h-[1px] w-12 bg-amber-500"></div>
+                    <span class="text-amber-500 font-serif italic text-xl">Sanubari Alam</span>
+                </div>
+                <h2 class="text-6xl font-serif text-white mb-10 leading-tight">Kristal Biru <br><span class="italic text-slate-500 font-light">Banda Neira</span></h2>
+                <p class="text-lg font-light leading-relaxed text-slate-400 mb-12 italic border-l-2 border-amber-500/20 pl-6">
+                    Maksud dari kejernihan ini adalah pengingat bahwa **alam adalah cermin jiwa**. Di Pantai Ora, laut bukan sekadar air, melainkan urat nadi kehidupan yang memberi makan raga dan ketenangan batin.
+                </p>
+            </div>
+            <div class="relative" data-aos="zoom-out">
+                <img src="image/pantau.png" class="rounded-[60px] shadow-2xl transition duration-1000 hover:scale-[1.02]" alt="Ocean">
+            </div>
+        </div>
+    </section>
+
+    <section id="budaya" class="py-40 bg-[#03050a] relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-32" data-aos="fade-up">
+                <h2 class="font-serif text-7xl text-white italic mb-4">Tari Cakalele</h2>
+                <p class="text-amber-500/80 tracking-[0.5em] uppercase text-[10px] font-bold">Maksud: Manifestasi Spiritualitas Perang</p>
+            </div>
+            
+            <div class="flex flex-col lg:flex-row gap-20 items-center">
+                <div class="flex-1 glass-premium p-16 rounded-[40px] relative overflow-hidden" data-aos="fade-up">
+                    <p class="text-2xl font-serif italic leading-relaxed text-white/90 mb-10">
+                        "Cakalele bukan bermaksud memuja kekerasan, melainkan simbol **proteksi**. Pedang (Parang) dan Perisai (Salawaku) bermaksud bahwa setiap insan harus mampu melindungi kebenaran dan keadilan."
+                    </p>
+                </div>
+                <div class="flex-1 relative group" data-aos="fade-left">
+                    <img src="image/cakalele.png" class="rounded-3xl border border-white/10 grayscale hover:grayscale-0 transition duration-1000 w-full object-cover h-[500px]" alt="Dance">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="adat" class="py-60 bg-zinc-950 relative">
+        <div class="max-w-4xl mx-auto text-center px-6" data-aos="zoom-in">
+            <h2 class="font-serif text-6xl md:text-8xl text-white italic mb-12">Pela Gandong</h2>
+            <p class="text-2xl font-serif text-amber-500 mb-12 italic">"Potong di kuku, rasa di daging. Ale rasa, beta rasa."</p>
+            <p class="text-lg font-light leading-loose text-slate-400 italic">
+                Maksud dari filosofi ini adalah **Kesadaran Kosmis** bahwa kita berasal dari satu rahim yang sama. Tak peduli agama atau asal desa, luka satu orang Maluku adalah duka bagi seluruh kepulauan. Inilah benteng perdamaian sejati.
+            </p>
+        </div>
+    </section>
+
+    <section id="kuliner" class="py-40 bg-[#03050a]">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-24">
+                <h2 class="font-serif text-7xl text-white italic mb-4">Rasa Negeri</h2>
+                <p class="text-amber-500 tracking-widest uppercase text-xs">Maksud: Harmoni Tanah dan Laut</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-[800px]">
+                <div class="md:col-span-8 group relative overflow-hidden rounded-[40px] bg-slate-900" data-aos="fade-up">
+                    <img src="image/papeda.png" class="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-all duration-[2s]" alt="Papeda">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black via-transparent to-transparent p-12 flex flex-col justify-end">
+                        <h4 class="text-4xl font-serif text-white italic mb-2">Papeda & Ikan Kuah Kuning</h4>
+                        <p class="text-slate-400 italic text-sm max-w-md">Maksud: Sagu adalah simbol resiliensi. Ia tumbuh di rawa, kuat dan menghidupi, melambangkan karakter orang Maluku yang tahan banting.</p>
+                    </div>
+                </div>
+                <div class="md:col-span-4 grid grid-rows-2 gap-6">
+                    <div class="group relative overflow-hidden rounded-[40px] bg-slate-900" data-aos="fade-left">
+                        <img src="image/sambal.png" class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-all duration-[2s]" alt="Colo-colo">
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black">
+                            <h4 class="text-2xl font-serif text-white italic">Sambal Colo-Colo</h4>
+                        </div>
+                    </div>
+                    <div class="group relative overflow-hidden rounded-[40px] bg-slate-900" data-aos="fade-left" data-aos-delay="200">
+                        <img src="image/cengkeh.png" class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition-all duration-[2s]" alt="Spices">
+                        <div class="absolute inset-0 p-8 flex flex-col justify-end bg-gradient-to-t from-black">
+                            <h4 class="text-2xl font-serif text-white italic">Pala & Cengkeh</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+   <footer class="py-40 bg-[#050810] border-t border-white/5 text-center px-6">
+    <div class="max-w-4xl mx-auto" data-aos="fade-up">
+        <h2 class="font-serif text-5xl text-white mb-16 italic">Mari Menjadi Bagian dari Cerita Ini.</h2>
+        
+        <div class="flex flex-col items-center justify-center gap-16">
+            <div class="flex justify-center items-center opacity-60 hover:opacity-100 transition-all duration-700 ease-in-out group">
+                <img 
+                    src="image/KL6_Wonderful Indonesia - Koleksilogo.com (1).svg" 
+                    class="h-24 md:h-32 w-auto object-contain filter brightness-125" 
+                    alt="Wonderful Indonesia"
+                >
+            </div>
+
+            <div class="w-full">
+                <div class="h-px w-24 bg-gradient-to-r from-transparent via-amber-500/50 to-transparent mx-auto mb-10"></div>
+                <p class="text-[10px] tracking-[0.8em] uppercase text-slate-500 font-bold">
+                    Karya Digital Warisan Maluku &copy; 2026 — Mahakarya Timur
+                </p>
+            </div>
+        </div>
+    </div>
+</footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({ duration: 1500, once: false });
+
+        window.onscroll = function() {
+            let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+            let height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            let scrolled = (winScroll / height) * 100;
+            document.getElementById("progress-bar").style.width = scrolled + "%";
+
+            var nav = document.getElementById('navbar');
+            if (window.pageYOffset > 100) {
+                nav.style.background = "rgba(3, 5, 10, 0.9)";
+                nav.style.backdropFilter = "blur(20px)";
+                nav.style.padding = "15px 24px";
+            } else {
+                nav.style.background = "transparent";
+                nav.style.backdropFilter = "none";
+                nav.style.padding = "32px 24px";
+            }
+        };
+    </script>
+</body>
+</html>
